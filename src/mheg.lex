@@ -2,6 +2,7 @@
  *
  *               Copyright 2003 Samsung Electronics (UK) Ltd.
  *               Copyright 2005,2007 SpongeLava Ltd.
+ *               Copyright (c) 2013 Strategy & Technology Ltd.
  * 
  *
  *  System        : mhegenc
@@ -137,11 +138,14 @@ colon       \x3a
 {TRUE}/{WD}     {X(); yylval.ival = 1;return eTOK_BOOLEAN;}
 {FALSE}/{WD}    {X(); yylval.ival = 0;return eTOK_BOOLEAN;}
 
-{STRING}/{WD}   {X(); yylval.sval.octs = yytext;
+{STRING}/{WD}   {X(); yylval.sval.octs = malloc(yyleng);
+                      memcpy(yylval.sval.octs, yytext, yyleng);
                       yylval.sval.octetLen = yyleng; return eTOK_STRING;}
-{QPRINTABLE}/{WD} {X(); yylval.sval.octs = yytext; 
+{QPRINTABLE}/{WD} {X(); yylval.sval.octs = malloc(yyleng);
+                      memcpy(yylval.sval.octs, yytext, yyleng);
                       yylval.sval.octetLen = yyleng; return eTOK_STRING;}
-{BASE64}/{WD}   {X(); yylval.sval.octs = yytext; 
+{BASE64}/{WD}   {X(); yylval.sval.octs = malloc(yyleng);
+                      memcpy(yylval.sval.octs, yytext, yyleng);
                       yylval.sval.octetLen = yyleng; return eTOK_STRING;}
 
 {LPAREN}        {X();  return eTOK_LPAREN; }

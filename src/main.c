@@ -245,7 +245,7 @@ main(int argc, char *argv[])
                         "// Decoded from ASN.1 file '%s'\n"
                         "// %s\n"
                         "//   by 'mhegenc'\n"
-                        "//   bugs/suggestions to mhegenc@seri.co.uk please!\n"
+                        "//   bugs/suggestions to https://code.google.com/p/mhegenc/ please!\n"
                         "//\n",
                         infilename, date_time_str
                         );
