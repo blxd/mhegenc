@@ -10060,7 +10060,7 @@ ENV_TYPE env)
 
     if (((tagId1 == MAKE_TAG_ID (UNIV, CONS, SEQ_TAG_CODE)) ||
      (tagId1 ==MAKE_TAG_ID (UNIV, PRIM, INTEGER_TAG_CODE)) ||
-    (tagId1 == MAKE_TAG_ID (CNTX, CONS, 251))))
+    (tagId1 == MAKE_TAG_ID (CNTX, CONS, 236))))
     {
         elmtLen1 = BDecLen (b, &totalElmtsLen1, env);
     (v->target) = (GenericObjectReference*) Asn1Alloc (sizeof (GenericObjectReference));
@@ -10069,7 +10069,7 @@ ENV_TYPE env)
     tagId1 = BDecTag (b, &totalElmtsLen1, env);
     }
     else
-        longjmp (env, -284);
+        longjmp (env, -696);
 
 
     if (((tagId1 == MAKE_TAG_ID (UNIV, CONS, SEQ_TAG_CODE)) ||
@@ -10083,14 +10083,14 @@ ENV_TYPE env)
         if (elmtLen0 == INDEFINITE_LEN)
             BDecEoc (b, &totalElmtsLen1, env);
         else if (totalElmtsLen1 != elmtLen0)
-            longjmp (env, -285);
+            longjmp (env, -697);
     }
     else
-        longjmp (env, -286);
+        longjmp (env, -698);
 
 
     if (!seqDone)
-        longjmp (env, -287);
+        longjmp (env, -699);
 
     (*bytesDecoded) += totalElmtsLen1;
 }  /* BDecGetCounterPositionContent */
@@ -10141,7 +10141,7 @@ ENV_TYPE env)
 
     if (((tagId1 == MAKE_TAG_ID (UNIV, CONS, SEQ_TAG_CODE)) ||
      (tagId1 ==MAKE_TAG_ID (UNIV, PRIM, INTEGER_TAG_CODE)) ||
-    (tagId1 == MAKE_TAG_ID (CNTX, CONS, 252))))
+    (tagId1 == MAKE_TAG_ID (CNTX, CONS, 236))))
     {
         elmtLen1 = BDecLen (b, &totalElmtsLen1, env);
     (v->target) = (GenericObjectReference*) Asn1Alloc (sizeof (GenericObjectReference));
@@ -10150,7 +10150,7 @@ ENV_TYPE env)
     tagId1 = BDecTag (b, &totalElmtsLen1, env);
     }
     else
-        longjmp (env, -284);
+        longjmp (env, -700);
 
 
     if (((tagId1 == MAKE_TAG_ID (UNIV, CONS, SEQ_TAG_CODE)) ||
@@ -10164,14 +10164,14 @@ ENV_TYPE env)
         if (elmtLen0 == INDEFINITE_LEN)
             BDecEoc (b, &totalElmtsLen1, env);
         else if (totalElmtsLen1 != elmtLen0)
-            longjmp (env, -285);
+            longjmp (env, -701);
     }
     else
-        longjmp (env, -286);
+        longjmp (env, -702);
 
 
     if (!seqDone)
-        longjmp (env, -287);
+        longjmp (env, -703);
 
     (*bytesDecoded) += totalElmtsLen1;
 }  /* BDecGetCounterMaxPositionContent */
