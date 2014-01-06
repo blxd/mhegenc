@@ -7,7 +7,7 @@ LEX = flex
 TAR = tar
 
 VERSION_MAJOR := 0
-VERSION_MINOR := 14
+VERSION_MINOR := 15
 
 UNAME := $(shell uname)
 
