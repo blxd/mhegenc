@@ -1298,10 +1298,12 @@ PrintElementaryAction PARAMS ((f, v, indent),
         switch(v->a.set_font_ref->new_font->choiceId)
         {
         case NEWFONT_NEW_FONT_NAME:
+            fprintf (f,":GOctetString ");
             PrintGenericOctetString(
                 f, v->a.set_font_ref->new_font->a.new_font_name, 0);
             break;
         case NEWFONT_NEW_FONT_REFERENCE:
+            fprintf (f,":GObjectRef ");
             PrintGenericObjectReference(
                 f, v->a.set_font_ref->new_font->a.new_font_reference, 0);
             break;
